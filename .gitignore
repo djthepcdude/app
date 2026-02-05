@@ -1,4 +1,4 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+no# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # IDE and editors
 .idea/
@@ -78,3 +78,29 @@ agenthub/agents/youtube/db
 
 # Mobile development
 android-sdk/ 
+
+# ---- Emergent (ignore entirely) ----
+emergent.yml
+.emergent/
+emergent/
+
+# ---- Python ----
+venv/
+.env
+__pycache__/
+*.pyc
+.ruff_cache/
+
+# ---- Node / Frontend ----
+node_modules/
+dist/
+build/
+
+# ---- Editor / OS ----
+.vscode/
+.DS_Store
+Thumbs.db
+
+# ---- Test / runtime artifacts ----
+test_reports/
+*.log
