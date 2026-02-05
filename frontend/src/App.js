@@ -1,8 +1,10 @@
 import "@/App.css";
+import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Toaster } from "sonner";
 import { Navbar } from "./components/Navbar";
 import { Footer } from "./components/Footer";
+import { AnnouncementBanner } from "./components/AnnouncementBanner";
 
 // Pages
 import Home from "./pages/Home";
@@ -15,12 +17,25 @@ import Press from "./pages/Press";
 import Contact from "./pages/Contact";
 
 function App() {
+  const [showBanner, setShowBanner] = useState(true);
+
   return (
     <div className="min-h-screen bg-[#050505]">
       {/* Grain overlay */}
       <div className="grain-overlay" />
       
       <BrowserRouter>
+        {/* Announcement Banner */}
+        {showBanner && (
+          <AnnouncementBanner
+            title="NEW MUSIC COMING SOON"
+            subtitle="Fresh heat from the Central District"
+            releaseDate="2025-04-01T00:00:00"
+            spotifyPreSaveLink="https://open.spotify.com/artist/0TboE335UT8BpAg6aSpoAm"
+            onClose={() => setShowBanner(false)}
+          />
+        )}
+        
         <Navbar />
         <main>
           <Routes>
