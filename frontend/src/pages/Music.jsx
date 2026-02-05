@@ -1,4 +1,4 @@
-import { ExternalLink, Music2, Apple, Music } from 'lucide-react';
+import { ExternalLink, Music2, Apple, Music as MusicIcon } from 'lucide-react';
 import { Button } from '../components/ui/button';
 
 const streamingLinks = [
@@ -16,7 +16,7 @@ const streamingLinks = [
   },
   {
     name: 'SoundCloud',
-    icon: Music,
+    icon: MusicIcon,
     url: 'https://soundcloud.com/mafi_d',
     color: 'bg-orange-500',
   },
@@ -43,7 +43,7 @@ const discography = [
   },
 ];
 
-const Music = () => {
+const MusicPage = () => {
   return (
     <div className="pt-20" data-testid="music-page">
       {/* Hero */}
@@ -187,4 +187,4 @@ const Music = () => {
   );
 };
 
-export default Music;
+export default MusicPage;
