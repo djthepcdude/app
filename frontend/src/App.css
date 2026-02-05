@@ -1,34 +1,262 @@
-.App-logo {
-    height: 40vmin;
-    pointer-events: none;
+/* Hero Section */
+.hero-section {
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
 }
 
-.App-header {
-    background-color: #0f0f10;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(5, 5, 5, 0.3) 0%, #050505 100%);
+  z-index: 1;
 }
 
-.App-link {
-    color: #61dafb;
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: left;
+  padding: 0 24px;
+  max-width: 1280px;
+  width: 100%;
 }
 
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+.hero-title {
+  font-family: 'Anton', sans-serif;
+  font-size: clamp(4rem, 15vw, 12rem);
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  line-height: 0.9;
+  color: #ffffff;
+}
+
+.hero-tagline {
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  color: #A3A3A3;
+  margin-top: 16px;
+  max-width: 500px;
+}
+
+/* Section styles */
+.section {
+  padding: 80px 24px;
+}
+
+@media (min-width: 768px) {
+  .section {
+    padding: 120px 48px;
+  }
+}
+
+.section-title {
+  font-family: 'Anton', sans-serif;
+  font-size: clamp(2rem, 5vw, 4rem);
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  margin-bottom: 48px;
+}
+
+/* Navigation */
+.nav-link {
+  position: relative;
+  color: #A3A3A3;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: #FFFFFF;
+}
+
+.nav-link.active {
+  color: #10B981;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #10B981;
+  transition: width 0.2s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* Music embed cards */
+.music-card {
+  background: #121212;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.music-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(16, 185, 129, 0.3);
+}
+
+/* Video grid */
+.video-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+@media (min-width: 768px) {
+  .video-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .video-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Tour date item */
+.tour-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px;
+  background: #0A0A0A;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.tour-item:hover {
+  border-color: rgba(16, 185, 129, 0.3);
+  background: #121212;
+}
+
+/* Merch card */
+.merch-card {
+  background: #121212;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.merch-card:hover {
+  transform: scale(1.02);
+  border-color: rgba(16, 185, 129, 0.3);
+}
+
+.merch-image {
+  aspect-ratio: 1;
+  background: #0A0A0A;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Press photo grid */
+.press-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+@media (min-width: 768px) {
+  .press-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Form styles */
+.form-input {
+  background: #0A0A0A;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  padding: 12px 16px;
+  border-radius: 8px;
+  width: 100%;
+  transition: border-color 0.2s ease;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #10B981;
+}
+
+.form-input::placeholder {
+  color: #525252;
+}
+
+/* Footer */
+.footer {
+  background: #0A0A0A;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 48px 24px;
+}
+
+/* Social icons */
+.social-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  color: #A3A3A3;
+  transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.social-icon:hover {
+  color: #10B981;
+  border-color: #10B981;
+  background: rgba(16, 185, 129, 0.1);
+}
+
+/* Ticket stub style for tour */
+.ticket-stub {
+  position: relative;
+  overflow: hidden;
+}
+
+.ticket-stub::before {
+  content: '';
+  position: absolute;
+  left: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background: #050505;
+  border-radius: 50%;
+}
+
+.ticket-stub::after {
+  content: '';
+  position: absolute;
+  right: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background: #050505;
+  border-radius: 50%;
 }
