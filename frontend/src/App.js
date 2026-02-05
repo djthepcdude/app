@@ -6,7 +6,7 @@ import { Footer } from "./components/Footer";
 
 // Pages
 import Home from "./pages/Home";
-import Music from "./pages/Music";
+import MusicPage from "./pages/Music";
 import Videos from "./pages/Videos";
 import About from "./pages/About";
 import Tour from "./pages/Tour";
@@ -25,7 +25,7 @@ function App() {
         <main>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/music" element={<Music />} />
+            <Route path="/music" element={<MusicPage />} />
             <Route path="/videos" element={<Videos />} />
             <Route path="/about" element={<About />} />
             <Route path="/tour" element={<Tour />} />
