@@ -31,7 +31,7 @@ function App() {
             <AnnouncementBanner
               title="NEW MUSIC COMING SOON"
               subtitle="Fresh heat from the Central District"
-              releaseDate="2025-04-01T00:00:00"
+              releaseDate="2026-04-01T00:00:00"
               spotifyPreSaveLink="https://open.spotify.com/artist/0TboE335UT8BpAg6aSpoAm"
               onClose={() => setShowBanner(false)}
             />
