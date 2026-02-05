@@ -27,16 +27,19 @@ function App() {
       <BrowserRouter>
         {/* Announcement Banner */}
         {showBanner && (
-          <AnnouncementBanner
-            title="NEW MUSIC COMING SOON"
-            subtitle="Fresh heat from the Central District"
-            releaseDate="2025-04-01T00:00:00"
-            spotifyPreSaveLink="https://open.spotify.com/artist/0TboE335UT8BpAg6aSpoAm"
-            onClose={() => setShowBanner(false)}
-          />
+          <div className="fixed top-0 left-0 right-0 z-[60]">
+            <AnnouncementBanner
+              title="NEW MUSIC COMING SOON"
+              subtitle="Fresh heat from the Central District"
+              releaseDate="2025-04-01T00:00:00"
+              spotifyPreSaveLink="https://open.spotify.com/artist/0TboE335UT8BpAg6aSpoAm"
+              onClose={() => setShowBanner(false)}
+            />
+          </div>
         )}
         
-        <Navbar />
+        <div className={showBanner ? "pt-[72px] sm:pt-[60px]" : ""}>
+          <Navbar />
         <main>
           <Routes>
             <Route path="/" element={<Home />} />
@@ -50,6 +53,7 @@ function App() {
           </Routes>
         </main>
         <Footer />
+        </div>
       </BrowserRouter>
       
       <Toaster 
