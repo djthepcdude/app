@@ -83,3 +83,27 @@ Build a modern, industry-standard website for a hip-hop artist named Mafi D (aka
 
 ## Contact
 - Booking Email: booking@mafidaklick.com
+
+## Update: 2026-02-05 - Announcement Banner Feature Added
+
+### New Feature: Announcement Banner with Countdown Timer
+- Sticky announcement banner at top of page
+- Live countdown timer (Days, Hours, Minutes, Seconds)
+- "Pre-Save" CTA button linking to Spotify
+- Dismissible with X button
+- Configurable title, subtitle, release date, and CTA link
+- Changes to "OUT NOW!" + "Listen Now" when countdown reaches zero
+
+### Configuration (in App.js):
+```jsx
+<AnnouncementBanner
+  title="NEW MUSIC COMING SOON"
+  subtitle="Fresh heat from the Central District"
+  releaseDate="2026-04-01T00:00:00"
+  spotifyPreSaveLink="https://open.spotify.com/artist/0TboE335UT8BpAg6aSpoAm"
+  onClose={() => setShowBanner(false)}
+/>
+```
+
+### Bug Fix Applied:
+- Changed navbar from `fixed` to `sticky` positioning to prevent banner blocking navigation clicks
