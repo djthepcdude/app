@@ -1,0 +1,145 @@
+{
+  "identity": {
+    "name": "Mafi D",
+    "aka": ["Mafi Klick", "Mafia Klick"],
+    "genre": "Hip-Hop / Rap",
+    "location": "Seattle, Washington",
+    "vibe": "Urban, raw, authentic, West Coast, street-wise",
+    "emotional_tone": "Confident, grounded, real"
+  },
+  "typography": {
+    "headings": {
+      "font_family": "Anton, sans-serif",
+      "weight": "400",
+      "style": "uppercase",
+      "letter_spacing": "tracking-tight",
+      "usage": "Hero titles, Section headers, Artist Name"
+    },
+    "body": {
+      "font_family": "Manrope, sans-serif",
+      "weight": "400",
+      "usage": "Paragraphs, UI elements, navigation"
+    },
+    "accents": {
+      "font_family": "Permanent Marker, cursive",
+      "usage": "Graffiti-style overlays, signatures, 'sold out' stamps"
+    }
+  },
+  "colors": {
+    "palette": {
+      "background": {
+        "default": "#050505",
+        "paper": "#0A0A0A",
+        "card": "#121212"
+      },
+      "primary": {
+        "main": "#10B981",
+        "dark": "#047857",
+        "light": "#34D399",
+        "glow": "0 0 20px rgba(16, 185, 129, 0.5)"
+      },
+      "text": {
+        "primary": "#FFFFFF",
+        "secondary": "#A3A3A3",
+        "muted": "#525252"
+      },
+      "accent": {
+        "seattle_green": "#005C45",
+        "concrete": "#262626"
+      }
+    },
+    "gradients": {
+      "hero_overlay": "linear-gradient(to bottom, rgba(5,5,5,0) 0%, #050505 100%)",
+      "emerald_fade": "linear-gradient(90deg, #059669 0%, transparent 100%)"
+    }
+  },
+  "visual_enhancers": {
+    "textures": {
+      "grain": "url('https://grainy-gradients.vercel.app/noise.svg')",
+      "concrete": "url('https://images.unsplash.com/photo-1605602922835-a08452b4179d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzR8MHwxfHNlYXJjaHwxfHx1cmJhbiUyMGNvbmNyZXRlJTIwdGV4dHVyZSUyMGRhcmslMjBncnVuZ2V8ZW58MHx8fHwxNzcwMjU5NTE1fDA&ixlib=rb-4.1.0&q=85')"
+    },
+    "effects": {
+      "glassmorphism": "backdrop-blur-xl bg-black/40 border border-white/10",
+      "neon_glow": "drop-shadow-[0_0_10px_rgba(16,185,129,0.5)]",
+      "scanlines": "repeating-linear-gradient(0deg, transparent, transparent 2px, #000000 3px)"
+    }
+  },
+  "layout_strategy": {
+    "grid_system": "Bento Grid (Mode A: Tetris)",
+    "spacing": "Generous (p-8 to p-24)",
+    "container_width": "max-w-7xl mx-auto",
+    "alignment": "Asymmetrical balance"
+  },
+  "components": {
+    "hero": {
+      "type": "Full-screen immersive",
+      "elements": [
+        "Background Video/Image with Grain Overlay",
+        "Massive 'MAFI D' Typography (Anton, 15vw)",
+        "Floating 'Listen Now' CTA (Pill shape, Neon Glow)"
+      ]
+    },
+    "music_player": {
+      "style": "Floating persistent bar or 'Vinyl' card",
+      "features": ["Waveform visualization", "Spotify/Apple integration"]
+    },
+    "tour_dates": {
+      "style": "Ticket Stub List",
+      "interaction": "Hover reveals venue image background"
+    },
+    "navigation": {
+      "style": "Floating Dock (Bottom or Side)",
+      "glass_effect": "Heavy blur, thin border"
+    }
+  },
+  "media": {
+    "image_urls": {
+      "hero_bg": "https://images.unsplash.com/photo-1619549801312-f24d5602516d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzNTl8MHwxfHNlYXJjaHwxfHxzZWF0dGxlJTIwc2t5bGluZSUyMG5pZ2h0JTIwdXJiYW58ZW58MHx8fHwxNzcwMjU5NTA2fDA&ixlib=rb-4.1.0&q=85",
+      "concert_crowd": "https://images.unsplash.com/photo-1549923478-1ba2705402fa?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MjJ8MHwxfHNlYXJjaHwzfHxoaXAlMjBob3AlMjBjb25jZXJ0JTIwY3Jvd2QlMjBkYXJrJTIwbW9vZHl8ZW58MHx8fHwxNzcwMjU5NTExfDA&ixlib=rb-4.1.0&q=85",
+      "texture_concrete": "https://images.unsplash.com/photo-1605602922835-a08452b4179d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzR8MHwxfHNlYXJjaHwxfHx1cmJhbiUyMGNvbmNyZXRlJTIwdGV4dHVyZSUyMGRhcmslMjBncnVuZ2V8ZW58MHx8fHwxNzcwMjU5NTE1fDA&ixlib=rb-4.1.0&q=85",
+      "texture_grunge": "https://images.unsplash.com/photo-1762118032845-c72ed4646263?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzR8MHwxfHNlYXJjaHwyfHx1cmJhbiUyMGNvbmNyZXRlJTIwdGV4dHVyZSUyMGRhcmslMjBncnVuZ2V8ZW58MHx8fHwxNzcwMjU5NTE1fDA&ixlib=rb-4.1.0&q=85"
+    }
+  },
+  "motion": {
+    "library": "Framer Motion + Lenis (Smooth Scroll)",
+    "preferences": {
+      "reduced_motion": "Respect user settings",
+      "scroll_animations": "Parallax on images, Fade-up on text",
+      "hover_states": "Scale up (1.05), Glow intensity increase"
+    }
+  },
+  "accessibility": {
+    "contrast": "WCAG AA (4.5:1 for normal text)",
+    "focus_states": "Visible Emerald Ring",
+    "aria_labels": "Mandatory for all icon buttons"
+  },
+  "instructions_to_main_agent": [
+    "Install 'lenis' for smooth scrolling immediately.",
+    "Use 'Anton' font for all major headings. Import from Google Fonts.",
+    "Implement the 'Seattle Green' (#10B981) as the primary accent color but use it sparingly for maximum impact.",
+    "Ensure the 'Grain' texture overlay is present on the background to give that 'raw' feel.",
+    "Do not use standard Shadcn cards. Customize them to be flat, dark, with a 1px border of white/10.",
+    "For the 'Music' section, create a custom layout that looks like a tracklist on the back of a CD case.",
+    "Use the 'Tetris' grid layout for the 'Videos' and 'Gallery' sections."
+  ],
+  "UNIVERSAL_GUIDELINES_FOR_MAIN_AGENT": [
+    "Dark colors look good when used independently without gradients. DO NOT use dark colors as gradients",
+    "Don't make generic centered layouts, simplistic gradients, and uniform styling.",
+    "Create depth through layered design elements with z-index hierarchy",
+    "Use glass-morphism effects with backdrop filters (12-24px blur)",
+    "You MUST NOT apply universal transition. Eg: transition: all. This results in breaking transforms. Always add transitions for specific interactive elements like button, input excluding transforms",
+    "You MUST NOT center align the app container, ie do not add .App { text-align: center; } in the css file. This disrupts the human natural reading flow of text",
+    "Always use modern button styles like pill-shaped, or sharp button with interaction animations & color relevant to the app style",
+    "NEVER: use AI assistant Emoji characters like 🤖🧠💭💡🔮🎯📚🎭🎬🎪🎉🎊🎁🎀🎂🍰🎈🎨🎰💰💵💳🏦💎🪙💸🤑📊📈📉💹🔢🏆🥇 etc for icons.",
+    "Every interaction needs micro-animations - hover states, transitions, parallax effects, and entrance animations. Static = dead.",
+    "Use 2-3x more spacing than feels comfortable. Cramped designs look cheap.",
+    "Subtle grain textures, noise overlays, custom cursors, selection states, and loading animations: separates good from extraordinary.",
+    "Main agent relies on these image URLs. Missing categories (especially sponsor logos) = main agent will use placeholder text which is FORBIDDEN",
+    "Prioritize using pre-existing components from src/components/ui when applicable",
+    "Create new components that match the style and conventions of existing components when needed",
+    "Examine existing components to understand the project's component patterns before creating new ones",
+    "Components MUST use named exports (export const ComponentName = ...)",
+    "Pages MUST use default exports (export default function PageName() {...})",
+    "Use sonner for toasts. Sonner component are located in /app/src/components/ui/sonner.tsx"
+  ]
+}
