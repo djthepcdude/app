@@ -25,21 +25,18 @@ function App() {
       <div className="grain-overlay" />
       
       <BrowserRouter>
-        {/* Announcement Banner */}
+        {/* Announcement Banner - Non-fixed, flows with page */}
         {showBanner && (
-          <div className="fixed top-0 left-0 right-0 z-[60]">
-            <AnnouncementBanner
-              title="NEW MUSIC COMING SOON"
-              subtitle="Fresh heat from the Central District"
-              releaseDate="2026-04-01T00:00:00"
-              spotifyPreSaveLink="https://open.spotify.com/artist/0TboE335UT8BpAg6aSpoAm"
-              onClose={() => setShowBanner(false)}
-            />
-          </div>
+          <AnnouncementBanner
+            title="NEW MUSIC COMING SOON"
+            subtitle="Fresh heat from the Central District"
+            releaseDate="2026-04-01T00:00:00"
+            spotifyPreSaveLink="https://open.spotify.com/artist/0TboE335UT8BpAg6aSpoAm"
+            onClose={() => setShowBanner(false)}
+          />
         )}
         
-        <div className={showBanner ? "pt-[72px] sm:pt-[60px]" : ""}>
-          <Navbar />
+        <Navbar />
         <main>
           <Routes>
             <Route path="/" element={<Home />} />
@@ -53,7 +50,6 @@ function App() {
           </Routes>
         </main>
         <Footer />
-        </div>
       </BrowserRouter>
       
       <Toaster 
